@@ -1,0 +1,19 @@
+block variables
+
+doctype html
+html.page(class= pageClass lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    block styles
+      link(rel='stylesheet' href='css/style.min.css')
+    title= title
+    meta(name='description' content='Техномарт — интернет-магазин строительных материалов и инструментов для ремонта.')
+    meta(name='keywords' content='Техномарт, строительные материалы, инструменты для ремонта')
+  body.page__body
+    .page__inner
+      main.page__content
+        block content
+    block modals
+    block scripts
+      script(src='js/script.min.js')
