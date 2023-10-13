@@ -1,0 +1,29 @@
+.logo {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  background: $accent-color;
+  border-bottom: 5px solid rgba($text-color, 0.24);
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+
+  &[href]:active {
+    background: $accent-color-darkest;
+  }
+}
+
+.logo__image {
+  display: block;
+  width: 108px;
+  height: 18px;
+  margin: 0 auto;
+  filter: invert(1);
+}
+
+.logo--big {
+  padding: 20px 32px;
+
+  .logo__image {
+    width: 138px;
+    height: 23px;
+  }
+}
