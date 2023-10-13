@@ -1,0 +1,5 @@
+mixin search-form(action)
+  form.search-form(action= action method='get')&attributes(attributes)
+    label.search-form__field
+      span.visually-hidden Поиск:
+      input.search-form__control(type='search' name='query' placeholder='Поиск:')
