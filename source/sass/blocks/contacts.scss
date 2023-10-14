@@ -1,0 +1,40 @@
+.contacts {
+  display: inline-grid;
+  row-gap: 3px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  color: $text-additional-color;
+}
+
+.contacts__phone {
+  display: grid;
+  padding: 10px 20px 8px;
+  border: 3px solid $background-color;
+  grid-auto-flow: column;
+  column-gap: 16px;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+  text-decoration: none;
+  color: $accent-color;
+  transition: color $little-interaction-duration $little-interaction-timing-function;
+
+  &::before {
+    content: "";
+    width: 19px;
+    height: 19px;
+    background: $text-weak-color;
+    mask: url("../img/icons.svg#phone");
+  }
+
+  &:hover {
+    color: $text-color;
+  }
+
+  &:active {
+    color: $text-weak-color;
+  }
+}
