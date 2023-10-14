@@ -1,0 +1,20 @@
+mixin user-navigation(isAuthorized)
+  .user-navigation(class= isAuthorized ? 'user-navigation--authorized' : false)&attributes(attributes)
+    if isAuthorized
+      ul.user-navigation__buttons
+        li.user-navigation__buttons-item.user-navigation__buttons-item--name
+          a.user-navigation__button.user-navigation__button--name(href='#') Варенье Смородиновое
+        li.user-navigation__buttons-item
+          a.user-navigation__button.user-navigation__button--sign-out(href='#')
+            span.visually-hidden Выйти
+      ul.user-navigation__links
+        li.user-navigation__links-item
+          a.user-navigation__link(href='#') Мои заказы
+        li.user-navigation__links-item
+          a.user-navigation__link(href='#') Личный кабинет
+    else
+      ul.user-navigation__buttons
+        li.user-navigation__buttons-item
+          a.user-navigation__button.user-navigation__button--sign-in(href='#') Войти
+        li.user-navigation__buttons-item
+          a.user-navigation__button.user-navigation__button--sign-up(href='#') Регистрация

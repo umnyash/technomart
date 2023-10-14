@@ -1,0 +1,132 @@
+$indentation-between-link-and-dot: 14px;
+
+.user-navigation {
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-additional-color;
+}
+
+.user-navigation__buttons {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 10px;
+}
+
+.user-navigation__buttons-item {
+  flex-grow: 1;
+
+  &--name {
+    flex-grow: 10;
+  }
+}
+
+.user-navigation__button {
+  display: grid;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 12px 24px;
+  grid-auto-flow: column;
+  column-gap: 6px;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  line-height: 1;
+  text-decoration: none;
+  color: $text-color;
+  background: $background-color;
+  transition: color $little-interaction-duration $little-interaction-timing-function;
+
+  &::before {
+    background: $text-weak-color;
+    transition: background-color $little-interaction-duration $little-interaction-timing-function;
+  }
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:hover:not(:active)::before {
+    background: $text-additional-color-2;
+  }
+
+  &:active {
+    color: $text-weak-color;
+  }
+
+  &--sign-in::before {
+    content: "";
+    width: 20px;
+    height: 17px;
+    mask: url("../img/icons.svg#sign-in");
+  }
+
+  &--sign-out {
+    padding: 12px 17px 12px 10px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 17px;
+      mask: url("../img/icons.svg#sign-out");
+    }
+  }
+
+  &--name {
+    padding: 12px 11px 12px 15px;
+    column-gap: 14px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 18px;
+      mask: url("../img/icons.svg#user");
+    }
+  }
+}
+
+.user-navigation__links {
+  display: flex;
+  padding: 0;
+  margin: 7px 0 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 2px $indentation-between-link-and-dot;
+  justify-content: center;
+}
+
+.user-navigation__links-item + .user-navigation__links-item {
+  display: flex;
+  column-gap: $indentation-between-link-and-dot;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+}
+
+.user-navigation__link {
+  text-decoration: none;
+  color: inherit;
+  transition: color $little-interaction-duration $little-interaction-timing-function;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $text-weak-color;
+  }
+}
+
+.user-navigation--authorized {
+  .user-navigation__buttons {
+    gap: 0;
+  }
+}
