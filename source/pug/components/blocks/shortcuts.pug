@@ -1,0 +1,8 @@
+mixin shortcuts
+  ul.shortcuts&attributes(attributes)
+    li.shortcuts__item
+      a.shortcuts__link.shortcuts__link--with-icon.shortcuts__link--with-icon_bookmarks(href='#') Закладки: 0
+    li.shortcuts__item
+      a.shortcuts__link.shortcuts__link--with-icon.shortcuts__link--with-icon_cart(class= pageClass === 'index-page' ? false : 'shortcuts__link--active' href='#')= `Корзина: ${pageClass === 'index-page' ? 0 : 10}`
+    li.shortcuts__item
+      a.shortcuts__link.shortcuts__link--accent(href='#') Оформить заказ
