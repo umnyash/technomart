@@ -1,0 +1,10 @@
+mixin socials__item(href, src, alt, width, height, imageOffsetClass)
+  li.socials__item
+    a.socials__link(href= href target='_blank' rel='nofollow noopener')
+      img.socials__logo(class= imageOffsetClass src= src width= width height= height alt= alt)
+
+mixin socials
+  ul.socials&attributes(attributes)
+    +socials__item('https://vk.com/htmlacademy', 'img/icons.svg#socials_vk', 'Логотип в виде букв «VK».', 25, 14)
+    +socials__item('https://www.facebook.com/htmlacademy', 'img/icons.svg#socials_facebook', 'Логотип в виде буквы «f».', 12, 22)
+    +socials__item('https://www.instagram.com/htmlacademy', 'img/icons.svg#socials_instagram', 'Логотип в виде фотоаппарата.', 21, 21)
