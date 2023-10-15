@@ -1,0 +1,28 @@
+.site-navigation {
+  display: flex;
+  padding: 0;
+  border-bottom: 5px solid $background-alter-color-dark;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: $additional-font-family;
+  font-size: 18px;
+  color: $text-alter-color;
+  background: $background-alter-color;
+}
+
+.site-navigation__link {
+  display: block;
+  padding: 17px 29px 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+
+  &[href]:hover {
+    background-color: $background-alter-color-dark;
+  }
+
+  &[href]:active {
+    background-color: $background-alter-color-darkest-2;
+  }
+}

@@ -1,0 +1,13 @@
+mixin site-navigation__item(text, href, page)
+  li
+    a.site-navigation__link(href= pageClass === page ? false : href title= pageClass === page ? 'Текущая страница' : false)&attributes(attributes)= text
+
+mixin site-navigation
+  ul.site-navigation&attributes(attributes)
+    +site-navigation__item('Главная', 'index.html', 'index-page')
+    +site-navigation__item('Компания', 'company.html', 'company-page')
+    +site-navigation__item('Каталог', 'catalog.html', 'catalog-page')
+    +site-navigation__item('Новости', 'news.html', 'news-page')
+    +site-navigation__item('Спецпредложения', 'special-offers.html', 'special-offers-page')
+    +site-navigation__item('Доставка', 'delivery.html', 'delivery-page')
+    +site-navigation__item('Контакты', 'contacts.html', 'contacts-page')
