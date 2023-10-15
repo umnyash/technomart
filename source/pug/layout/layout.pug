@@ -18,6 +18,7 @@ html.page(class= pageClass lang='ru')
     meta(name='keywords' content='Техномарт, строительные материалы, инструменты для ремонта')
   body.page__body
     .page__inner
+      +site-header(class=`${pageClass}__site-header`)
       main.page__content
         block content
     block modals
