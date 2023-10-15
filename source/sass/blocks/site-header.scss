@@ -1,0 +1,76 @@
+.site-header {
+  font-family: $additional-font-family;
+  background: $background-additional-color;
+}
+
+.site-header__panel {
+  font-size: 18px;
+  color: $text-alter-color;
+  background: $background-alter-color-dark;
+}
+
+.site-header__panel-inner {
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  padding: 0 0 0 220px;
+  grid-template-columns: 1fr 450px;
+}
+
+.site-header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+}
+
+.site-header__shortcuts {
+  margin: 0;
+}
+
+.site-header__inner {
+  display: flex;
+  padding: 43px 0 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.site-header__description {
+  width: 223px;
+  margin: 0 0 0 31px;
+  font-size: 16px;
+  font-style: italic;
+  color: $accent-color;
+}
+
+.site-header__contacts {
+  width: 270px; // (1)
+  margin: 3px 48px 0;
+}
+
+.site-header__user-navigation {
+  max-width: 320px; // (2)
+  margin: 3px 0 0;
+}
+
+.site-header__site-navigation {
+  width: 100%;
+  margin: 40px 0 0;
+}
+
+/* (1)
+ * Если понадобится чуть-чуть увеличить ширину блока с контактами
+ * (например, если текст адреса удлинится и чтобы он не располагался
+ * на двух строках), то это можно сделать за счёт уменьшения
+ * блока с описанием site-header__description.
+ */
+
+/* (2)
+ * Самым длинным текстом могут быть имя и фамилия пользователя,
+ * поэтому для них предоставлена возможность потеснить другие
+ * элементы и расшириться насколько это возможно – до 320px:
+ * 940 - (223 + 31) - (270 + 48 * 2) = 320
+ * ширина центровщика - (ширина site-header__description + отступ слева) - (ширина site-header__contacts + боковые отступы) = 320
+ * Если ширину не ограничить, то блок может перенестись на новый ряд из-за flex-wrap.
+ */

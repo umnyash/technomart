@@ -1,0 +1,12 @@
+mixin site-header
+  header.site-header&attributes(attributes)
+    .site-header__panel
+      .site-header__panel-inner.container
+        +logo(class='site-header__logo')
+        +search-form
+        +shortcuts(class='site-header__shortcuts')
+    .site-header__inner.container
+      p.site-header__description Интернет-магазин строительных материалов и&nbsp;инструментов для&nbsp;ремонта
+      +contacts(class='site-header__contacts')
+      +user-navigation(pageClass !== 'index-page')(class='site-header__user-navigation')
+      +site-navigation(class='site-header__site-navigation')
