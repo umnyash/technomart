@@ -1,0 +1,34 @@
+mixin site-footer__navigation-item(text, href, page)
+  li
+    a.site-footer__navigation-link(href= pageClass === page ? false : href title= pageClass === page ? 'Текущая страница' : false)&attributes(attributes)= text
+
+mixin site-footer
+  footer.site-footer&attributes(attributes)
+    .site-footer__inner.container
+      +logo(class='site-footer__logo logo--big')
+      address.site-footer__contacts г.&nbsp;Санкт-Петербург, наб.&nbsp;Реки Карповки, 5&nbsp;лит&nbsp;П
+        a.site-footer__contacts-link(href="tel:+78005558628") +7&nbsp;(800)&nbsp;555-86-28
+      ul.site-footer__navigation
+        +site-footer__navigation-item('Компания', 'company.html', 'company-page')
+        +site-footer__navigation-item('Новости', 'news.html', 'news-page')
+        +site-footer__navigation-item('Каталог', 'catalog.html', 'catalog-page')
+        +site-footer__navigation-item('Доставка', 'delivery.html', 'delivery-page')
+        +site-footer__navigation-item('Контакты', 'contacts.html', 'contacts-page')
+      ul.site-footer__navigation.site-footer__navigation--accent
+        +site-footer__navigation-item('Материалы', 'materials.html', 'materials-page')
+        +site-footer__navigation-item('Техника', 'technique.html', 'technique-page')
+        +site-footer__navigation-item('Инструмент', 'tool.html', 'tool-page')
+        +site-footer__navigation-item('Спецпредложения', 'special-offers.html', 'special-offers-page')
+    .site-footer__panel
+      .site-footer__panel-inner.container
+        p.site-footer__copyright © 2010–2021 Компания «Техномарт»#[br] Все права защищены
+        +socials(class='site-footer__socials socials--centered socials--decorated')
+        dl.site-footer__list
+          .site-footer__list-item
+            dt.site-footer__list-name Обратная связь:
+            dd.site-footer__list-value
+              a.site-footer__list-link(href='mailto:mail@htmlacademy.ru') mail@htmlacademy.ru
+          .site-footer__list-item
+            dt.site-footer__list-name Разработано&nbsp;—
+            dd.site-footer__list-value
+              a.site-footer__list-link(href='https://htmlacademy.ru/intensive/htmlcss' target='_blank' rel='nofollow noopener') htmlacademy.ru
