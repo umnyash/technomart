@@ -1,0 +1,53 @@
+.main-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 11px 16px 9px;
+  border: none;
+  text-align: center;
+  font: 14px/18px $additional-font-family;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-button--primary {
+  color: $text-alter-color;
+  background: $accent-color;
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+
+  &:hover {
+    background: $accent-color-dark;
+  }
+
+  &:active {
+    background: $accent-color-darkest;
+  }
+}
+
+.main-button--secondary {
+  color: $text-color;
+  background: $background-color;
+  transition: color $little-interaction-duration $little-interaction-timing-function;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $text-weak-color;
+  }
+}
+
+.main-button--secondary-alter {
+  color: inherit;
+  background: $background-alter-translucent-color-light;
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+
+  &:hover {
+    background: $background-alter-translucent-color;
+  }
+
+  &:active {
+    background: $background-alter-translucent-color-dark;
+  }
+}
