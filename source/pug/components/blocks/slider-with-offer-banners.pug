@@ -1,0 +1,6 @@
+mixin slider-with-offer-banners(banners)
+  .slider.splide&attributes(attributes)
+    .slider__list-wrapper.splide__track
+      ul.slider__list.splide__list
+        each banner in banners
+          +offer-banner(banner)(class='splide__slide')

@@ -1,0 +1,121 @@
+.slider {
+  position: relative;
+  color: $text-alter-color; // (1)
+}
+
+.slider__list-wrapper {
+  height: 100%;
+}
+
+.slider__navigation {
+  position: absolute;
+  inset: 18px 24px 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+}
+
+.slider__navigation-button {
+  position: relative;
+  width: 22px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: transparent;
+  visibility: visible;
+  transition: color $little-interaction-duration $little-interaction-timing-function;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 -16px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background-color: currentColor;
+    mask-image: url("../img/icons.svg#controls_right-arrow-without-tail");
+    transition: transform $little-interaction-duration $little-interaction-timing-function;
+  }
+
+  &--prev {
+    transform: scale(-1);
+  }
+
+  &:hover,
+  &:active {
+    color: $accent-color;
+  }
+
+  &:active::after {
+    transform: translateX(4px);
+  }
+}
+
+.slider__navigation-button svg {
+  display: none; // (2)
+}
+
+.slider__pagination {
+  position: absolute;
+  inset: auto auto 36px 50%;
+  z-index: 1;
+  display: flex;
+  max-width: 130px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.slider__pagination-button {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  color: inherit;
+  background: currentColor;
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -6px -7px;
+  }
+
+  &:hover,
+  &:active {
+    background: $text-weak-color;
+  }
+
+  &.is-active {
+    background: $accent-color;
+    pointer-events: none;
+  }
+}
+
+/* (1)
+ * Цвет слайдера наследуется его кнопками. Цвет нужно выбирать
+ * в зависимости от содержимого слайдов. Пока что назначен
+ * белый цвет по умолчанию. Для других цветов (например, черного)
+ * понадобятся модификаторы слайдера.
+ */
+
+/* (2)
+ * Splide вставляет в кнопку стрелочку в виде тега <svg>.
+ * Не знаю, как это предотвратить, поэтому просто скрываю.
+ */
