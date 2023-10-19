@@ -1,0 +1,28 @@
+-
+  var myOfferBanners = [ // 1
+    {
+      heading: 'Дрели',
+      text: 'Соседям на радость!',
+      image: 'img/offer-banners/drill.jpg',
+      image2x: 'img/offer-banners/drill@2x.jpg',
+      alt: 'Мужчина в жёлтой каске и защитных очках сверлит дрелью кирпичную стену.',
+      linkText: 'Открыть каталог',
+      href: 'catalog.html',
+    },
+    {
+      heading: 'Перфораторы',
+      text: 'Настоящие мужские игрушки',
+      image: 'img/offer-banners/hammer-drill.jpg',
+      image2x: 'img/offer-banners/hammer-drill@2x.jpg',
+      alt: 'Мужчина в синей каске и защитных наушниках долбит стену перфоратором.',
+      linkText: 'Открыть каталог',
+      href: 'catalog.html',
+    },
+  ];
+
+  /* (1)
+   * Хотел назвать переменную без 'my' – offersBanners,
+   * но имена переменных начинающееся с 'of' приводят к ошибке Pug:
+   * 'The value variable for each must either be a valid identifier (e.g. `item`) or a pair of identifiers in square brackets (e.g. `[key, value]`).'
+   * issue: https://github.com/pugjs/pug/issues/3263
+   */

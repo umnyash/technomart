@@ -1,0 +1,52 @@
+.offer-banner {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $additional-font-family;
+  font-size: 18px;
+  color: $text-alter-color;
+  background: $background-alter-color;
+}
+
+.offer-banner__header {
+  display: grid;
+  row-gap: 4px;
+  padding: 21px 24px 15px;
+  background: $background-alter-translucent-color-2;
+}
+
+.offer-banner__heading {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.offer-banner__text {
+  margin: 0;
+}
+
+.offer-banner__image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.offer-banner__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.offer-banner__content {
+  padding: 27px 24px;
+}
+
+.offer-banner__button {
+  min-width: 192px;
+}
