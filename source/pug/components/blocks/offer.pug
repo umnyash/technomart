@@ -1,0 +1,7 @@
+mixin offer({ heading, isNew, icon, iconWidth, iconHeight, linkText, href })
+  li.offer&attributes(attributes)
+    h3.offer__heading= heading
+    +main-button('a', linkText, '', href)(class='offer__button main-button--secondary-alter')
+    if isNew
+      p.offer__label New
+    img.offer__icon(src= icon width= iconWidth height= iconHeight alt='' aria-hidden='true' loading='lazy')
