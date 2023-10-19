@@ -1,0 +1,8 @@
+include ../../data/my-offers
+include ../../data/my-offer-banners
+
+mixin offers-list
+  ul.offers-list&attributes(attributes)
+    each offer in myOffers
+      +offer(offer)
+    +slider-with-offer-banners(myOfferBanners)(class='offers-list__banner')

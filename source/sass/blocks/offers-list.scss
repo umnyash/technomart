@@ -1,0 +1,12 @@
+.offers-list {
+  display: grid;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.offers-list__banner {
+  grid-row: 2 / 4;
+  grid-column: 1 / 3;
+}
