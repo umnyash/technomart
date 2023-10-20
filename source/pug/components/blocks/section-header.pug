@@ -1,0 +1,9 @@
+mixin section-header(headingText, headingLevel, linkText, href)
+  header.section-header&attributes(attributes)
+    case headingLevel
+      when 2
+        h2.section-header__heading.heading.heading--accent= headingText
+      default
+        h1.section-header__heading.heading.heading--accent= headingText
+    if linkText
+      +main-button('a', linkText, '', href)(class='section-header__button main-button--primary')

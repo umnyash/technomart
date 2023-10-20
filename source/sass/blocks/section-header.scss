@@ -1,0 +1,21 @@
+.section-header {
+  display: flex;
+  padding: 26px 14px 23px 28px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: $background-additional-color;
+
+  &--additional {
+    background: $background-additional-color-2;
+  }
+}
+
+.section-header__heading {
+  margin: 0 14px 0 0;
+}
+
+.section-header__button {
+  flex-shrink: 0;
+  min-width: 192px;
+  margin: 0 0 0 48px;
+}
