@@ -1,0 +1,8 @@
+.heading {
+  font: 400 30px/40px $additional-font-family;
+  text-transform: uppercase;
+
+  &--accent {
+    color: $text-additional-color;
+  }
+}
