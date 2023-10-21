@@ -1,0 +1,69 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  font: 14px/18px $additional-font-family;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button--primary {
+  padding: 10px 16px;
+  border: none;
+  color: $text-alter-color;
+  background: $special-color;
+  box-shadow: inset 0 -3px $special-color-darkest;
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+
+  &:hover {
+    background: $special-color-light;
+  }
+
+  &:active {
+    background: $special-color-dark;
+  }
+}
+
+.button--secondary {
+  padding: 8px 16px 6px;
+  border: 3px solid $special-color;
+  color: $text-additional-color;
+  background: $background-color;
+  transition-property: border-color, opacity;
+  transition-duration: $little-interaction-duration;
+  transition-timing-function: $little-interaction-timing-function;
+
+  &:hover {
+    border-color: currentColor;
+  }
+
+  &:active {
+    border-color: currentColor;
+    opacity: 0.3;
+  }
+}
+
+.button--with-icon {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 8px;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    background: currentColor;
+    opacity: 0.3;
+  }
+
+  &_cart::before {
+    width: 15px;
+    height: 15px;
+    mask: url("../img/icons.svg#cart");
+  }
+
+  &.button--primary {
+    padding-right: 26px;
+  }
+}
