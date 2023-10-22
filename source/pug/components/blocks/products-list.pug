@@ -1,0 +1,4 @@
+mixin products-list(products)
+  ul.products-list&attributes(attributes)
+    each product in products
+      +product(product)
