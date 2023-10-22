@@ -1,0 +1,15 @@
+mixin product({ heading, href, image, image2x, imageWebp, imageWebp2x, alt, oldPrice, newPrice, isNew })
+  li.product&attributes(attributes)
+    h3.product__heading
+      a.product__link(href= href)= heading
+    if isNew
+      +label('New')(class='product__label label--top-right')
+    picture.product__image-wrapper
+      source(type='image/webp' srcset=`${imageWebp}, ${imageWebp2x} 2x`)
+      img.product__image(src= image srcset= `${image2x} 2x` width='186' height='144' alt= alt loading='lazy')
+    p.product__price-wrapper
+      s.product__old-price!= `${oldPrice}&nbsp;₽`
+      b.product__new-price!= `${newPrice}&nbsp;₽`
+    p.product__actions
+      +button('a', 'Купить', '', '#')(class='product__button button button--primary button--with-icon button--with-icon_cart')
+      +button('a', 'В закладки', '', '#')(class='product__button button button--secondary')
