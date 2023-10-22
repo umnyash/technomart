@@ -1,0 +1,20 @@
+.label {
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.label__text {
+  display: block;
+  padding: 7px 0 5px;
+  text-align: center;
+  font: 14px/18px $additional-font-family;
+  text-transform: uppercase;
+  color: $text-alter-color;
+  background: $accent-color;
+  visibility: visible;
+  transform-origin: center top;
+}
+
+.label--top-right .label__text {
+  transform: translateX(50%) rotate(45deg) translateY(18px);
+}
