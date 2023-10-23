@@ -1,0 +1,5 @@
+mixin products({ heading, linkText, href, list })
+  section.products&attributes(attributes)
+    .container
+      +section-header(heading, 2, linkText, href )(class='products__header section-header--additional')
+      +products-list(list)(class='products__list')
