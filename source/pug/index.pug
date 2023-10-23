@@ -4,6 +4,10 @@ block variables
   - var title = 'Главная'
   - var pageClass = 'index-page'
 
+block data
+  include data/popular-products
+
 block content
   h1.visually-hidden Интернет-магазин «Техномарт»
   +offers(class='index-page__offers')
+  +products(popularProducts)(class='index-page__products')
