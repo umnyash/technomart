@@ -6,8 +6,10 @@ block variables
 
 block data
   include data/popular-products
+  include data/popular-manufacturers
 
 block content
   h1.visually-hidden Интернет-магазин «Техномарт»
   +offers(class='index-page__offers')
   +products(popularProducts)(class='index-page__products')
+  +brands(popularManufacturers)(class='index-page__brands')
