@@ -1,0 +1,8 @@
+mixin brands-list(brands)
+  ul.brands-list&attributes(attributes)
+    each brand in brands
+      li
+        a.brands-list__link(href= brand.href)
+          picture
+            source(type='image/webp' srcset=`${brand.imageWebp}, ${brand.imageWebp2x} 2x`)
+            img.brands__image(src= brand.image srcset= `${brand.image2x} 2x` width='190' height='115' alt= brand.alt loading='lazy')
