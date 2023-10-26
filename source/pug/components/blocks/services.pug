@@ -1,0 +1,8 @@
+include ../../data/services-tabs
+
+mixin services
+  section.services&attributes(attributes)
+    .container
+      h2.services__heading.heading Сервисы
+      p.services__lead Хороший интернет-магазин отличается от&nbsp;плохого не&nbsp;только ценами! Мы стараемся изо&nbsp;всех сил, чтобы сделать ваши покупки приятными.
+      +taber-with-services(servicesTabs)(class='services__taber')
