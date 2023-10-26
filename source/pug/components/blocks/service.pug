@@ -1,0 +1,9 @@
+mixin service({ heading, text, image, image2x, imageWebp, imageWebp2x, linkText, href })
+  section.service&attributes(attributes)
+    h3.service__heading.heading.heading--accent= heading
+    p.service__text!= text
+    picture.service__background-wrapper(aria-hidden='true')
+      source(type='image/webp' srcset=`${imageWebp}, ${imageWebp2x} 2x`)
+      img.service__background(src= image srcset= `${image2x} 2x` alt='' loading='lazy')
+    if linkText
+      +main-button('a', linkText, '', href)(class='service__button main-button--primary')
