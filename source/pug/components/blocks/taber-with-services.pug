@@ -1,0 +1,9 @@
+mixin taber-with-services(tabs)
+  .taber&attributes(attributes)
+    ul.taber__list
+      each tab in tabs
+        li.taber__tab-wrapper
+          a.taber__tab(href=`#${tab.id}`)= tab.heading
+    each tab in tabs
+      .taber__panel(id= tab.id)
+        +service(tab)(class='taber__content service--animated-appearance')

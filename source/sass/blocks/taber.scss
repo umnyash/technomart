@@ -1,0 +1,66 @@
+.taber {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  column-gap: 80px;
+  align-items: stretch;
+}
+
+.taber__list {
+  position: relative;
+  align-self: start;
+  display: grid;
+  padding: 49px 0 44px;
+  margin: 0;
+  list-style: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 10px;
+    pointer-events: none;
+    background-image: url("../img/taber-list-shadow.png");
+    background-size: 100% 100%;
+  }
+}
+
+.taber__tab {
+  display: block;
+  padding: 13px 22px 17px;
+  border-top: 1px solid $background-alter-color-light;
+  border-bottom: 1px solid $background-alter-color-dark;
+  text-decoration: none;
+  font: 700 21px/30px $additional-font-family;
+  color: $text-alter-color;
+  background: $background-alter-color;
+  transition-property: color, background-color;
+  transition-duration: $little-interaction-duration;
+  transition-timing-function: $little-interaction-timing-function;
+
+  &:hover {
+    background: $background-alter-color-dark;
+  }
+
+  &:active {
+    background: $background-alter-color-darkest-2;
+  }
+
+  &--active {
+    border-color: transparent;
+    color: $text-additional-color;
+    background: $background-color;
+    pointer-events: none;
+  }
+}
+
+.taber__panel {
+  margin: 42px 0 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.taber__content {
+  min-height: 100%;
+}
