@@ -1,9 +1,10 @@
-mixin offer-banner({ heading, text, image, image2x, alt, linkText, href })
+mixin offer-banner({ heading, text, image, image2x, imageWebp, imageWebp2x, alt, linkText, href })
   li.offer-banner&attributes(attributes)
     header.offer-banner__header
       h3.offer-banner__heading= heading
       p.offer-banner__text= text
     picture.offer-banner__image-wrapper
+      source(type='image/webp' srcset=`${imageWebp}, ${imageWebp2x} 2x`)
       img.offer-banner__image(src= image srcset= `${image2x} 2x` width='620' height='266' alt= alt loading='lazy')
     .offer-banner__content
       +main-button('a', linkText, '', href)(class='offer-banner__button main-button--primary')
