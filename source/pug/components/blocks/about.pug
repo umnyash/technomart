@@ -1,0 +1,7 @@
+mixin about
+  section.about&attributes(attributes)
+    h2.about__heading.heading Компания «Техномарт»
+    p.about__text Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для&nbsp;ремонта и&nbsp;строительства не&nbsp;оставит равнодушными любителей сэкономить на&nbsp;гастарбайтерах.
+    p.about__text.about__text--with-list Мы можем доставить ваш товар в&nbsp;самые отдаленные точки России!#[br] Техномарт работает со многими транспортными компаниями:
+    +list('Деловые линии', 'Автотрейдинг', 'ЖелДорЭкспедиция')(class='about__list list--accent')
+    +main-button('a', 'Подробнее о компании', '', '#')(class='about__button main-button--primary')
