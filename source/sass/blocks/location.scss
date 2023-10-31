@@ -1,0 +1,36 @@
+.location__heading {
+  margin: 0 0 18px;
+}
+
+.location__text {
+  margin: 0 0 18px;
+}
+
+.location__link {
+  display: block;
+  margin: 33px 0 25px;
+  transition-property: box-shadow, opacity;
+  transition-duration: $little-interaction-duration;
+  transition-timing-function: $little-interaction-timing-function;
+
+  &:hover {
+    box-shadow: $main-shadow;
+  }
+
+  &:active {
+    box-shadow: $main-shadow;
+    opacity: 0.5;
+  }
+}
+
+.location__image {
+  display: block;
+  width: 100%;
+  height: 158px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.location__button {
+  width: 100%;
+}
