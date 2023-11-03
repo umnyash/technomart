@@ -1,0 +1,8 @@
+mixin breadcrumbs(links)
+  ol.breadcrumbs&attributes(attributes)
+    li.breadcrumbs__item
+      a.breadcrumbs__link.breadcrumbs__link--home(href='index.html')
+        span.visually-hidden Главная
+    each link in links
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href= link.href)= link.text
