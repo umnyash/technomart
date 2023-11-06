@@ -1,0 +1,32 @@
+.number-field {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.number-field__control {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  border: 2px solid $background-additional-color-2;
+  border-radius: 4px;
+  text-align: center;
+  font: inherit;
+  color: inherit;
+  background: $background-additional-color-2;
+  appearance: textfield;
+  transition: background-color $little-interaction-duration $little-interaction-timing-function;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:enabled {
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}

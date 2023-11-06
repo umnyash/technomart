@@ -1,0 +1,4 @@
+mixin number-field(name, label, value, min, max, step, placeholder)
+  label.number-field&attributes(attributes)
+    span.number-field__label.visually-hidden= label
+    input.number-field__control(type='number' name=name value=value min=min max=max step=step placeholder=placeholder)
