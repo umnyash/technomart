@@ -1,0 +1,20 @@
+.number-range {
+  display: grid;
+  grid-template-columns: 1fr 30px 1fr;
+  row-gap: 9px;
+
+  &::before {
+    content: "—";
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    place-self: center;
+    font-size: 16px;
+  }
+}
+
+.number-range__range-wrapper {
+  grid-column: 1 / -1;
+  padding: 30px 20px;
+  border-radius: 4px;
+  background: $background-additional-color-2;
+}

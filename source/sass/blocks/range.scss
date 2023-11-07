@@ -1,0 +1,57 @@
+.range {
+  &.noUi-target {
+    border: none;
+    border-radius: 0;
+    background: $text-weak-color content-box; // (1)
+    box-shadow: none;
+  }
+
+  &.noUi-horizontal {
+    height: 20px;
+    padding: 9px 0;
+
+    .noUi-handle {
+      top: -9px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .noUi-base {
+    width: calc(100% - 20px);
+    margin: 0 auto;
+  }
+
+  .noUi-connect {
+    background: $special-color;
+  }
+
+  .noUi-handle {
+    box-sizing: border-box;
+    border: 8px solid $background-color;
+    border-radius: 50%;
+    background: $text-weak-color-2;
+    box-shadow: 0 2px rgba($text-weak-color-2, 0.3);
+    transition: box-shadow $little-interaction-duration $little-interaction-timing-function;
+    cursor: grab;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: $main-shadow;
+    }
+
+    &:active {
+      box-shadow: 0 0 rgba($text-weak-color-2, 0.3);
+      cursor: grabbing;
+    }
+  }
+}
+
+/* (1)
+ * Значение content-box для свойства background-clip.
+ */

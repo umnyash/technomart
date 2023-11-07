@@ -4,6 +4,9 @@ block variables
   - var title = 'Перфораторы'
   - var pageClass = 'catalog-page'
 
+prepend styles
+  link(rel='stylesheet' href='vendor/nouislider/nouislider.min.css')
+
 block data
 
 block content
@@ -14,3 +17,6 @@ block content
       { text: 'Перфораторы' },
     ])(class='catalog-page__breadcrumbs')
     +section-header('Перфораторы')(class='catalog-page__page-header')
+
+prepend scripts
+  script(src='vendor/nouislider/nouislider.min.js')

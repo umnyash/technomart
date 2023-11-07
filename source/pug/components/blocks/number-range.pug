@@ -1,0 +1,6 @@
+mixin number-range(rangeMin, rangeMax, rangeStep, minValueName, minValue, maxValueName, maxValue)
+  .number-range&attributes(attributes)
+    .number-range__range-wrapper
+      .range(class='number-range__range' data-step= rangeStep)
+    +number-field(minValueName, 'От', minValue, rangeMin, rangeMax, '1')(class='number-range__min')
+    +number-field(maxValueName, 'До', maxValue, rangeMin, rangeMax, '1')(class='number-range__max')
