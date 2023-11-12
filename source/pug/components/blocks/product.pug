@@ -8,7 +8,8 @@ mixin product({ heading, href, image, image2x, imageWebp, imageWebp2x, alt, oldP
       source(type='image/webp' srcset=`${imageWebp}, ${imageWebp2x} 2x`)
       img.product__image(src= image srcset= `${image2x} 2x` width='186' height='144' alt= alt loading='lazy')
     p.product__price-wrapper
-      s.product__old-price!= `${oldPrice}&nbsp;₽`
+      if oldPrice
+        s.product__old-price!= `${oldPrice}&nbsp;₽`
       b.product__new-price!= `${newPrice}&nbsp;₽`
     p.product__actions
       +button('a', 'Купить', '', '#')(class='product__button button button--primary button--with-icon button--with-icon_cart')
