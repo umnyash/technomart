@@ -1,0 +1,5 @@
+mixin note(heading, text)
+  section.note&attributes(attributes)
+    .container
+      h2.note__heading.heading!= heading
+      p.note__text!= text
