@@ -1,0 +1,27 @@
+mixin filter-form(action, method)
+  form.filter-form(action= action method= method)&attributes(attributes)
+    fieldset.filter-form__section
+      legend.filter-form__section-heading Цена:
+      +number-range(0, 35000, 1000, 'min-price', 0, 'max-price', 30000)
+    fieldset.filter-form__section
+      legend.filter-form__section-heading Производители:
+      ul.filter-form__section-list
+        li
+          +checker('Bosch', 'manufacturers', 'checkbox', 'bosch', true)
+        li
+          +checker('Интерскол', 'manufacturers', 'checkbox', 'interskol')
+        li
+          +checker('Makita', 'manufacturers', 'checkbox', 'makita', true)
+        li
+          +checker('Dewalt', 'manufacturers', 'checkbox', 'dewalt')
+        li
+          +checker('Hitachi', 'manufacturers', 'checkbox', 'hitachi')
+    fieldset.filter-form__section
+      legend.filter-form__section-heading Питание:
+      ul.filter-form__section-list
+        li
+          +checker('Аккумуляторные', 'power', 'radio', 'battery', true)
+        li
+          +checker('Сетевые', 'power', 'radio', 'network')
+    .filter-form__controls
+      +alter-button('button', 'Показать', 'submit')

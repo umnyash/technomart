@@ -1,0 +1,33 @@
+.filter-form__section {
+  display: grid;
+  padding: 0;
+  border: none;
+  margin: 0 0 25px;
+
+  & + & {
+    padding-top: 18px;
+    border-top: 1px solid $border-color-2;
+  }
+}
+
+.filter-form__section-heading {
+  float: left;
+  padding: 0;
+  margin: 0 0 15px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter-form__section-list {
+  display: grid;
+  padding: 0;
+  margin: 5px 0 0;
+  list-style: none;
+  gap: 16px;
+}
+
+.filter-form__controls {
+  display: grid;
+  margin: 34px 0 0;
+}
