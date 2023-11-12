@@ -1,0 +1,18 @@
+mixin sorting__type(text, href, isActive)
+  li
+    a.sorting__link(class= isActive ? 'sorting__link--active' : false href= href)= text
+
+mixin sorting
+  section.sorting&attributes(attributes)
+    h2.sorting__heading Сортировка:
+    ul.sorting__types
+      +sorting__type('По цене', '#', true)
+      +sorting__type('По типу', '#')
+      +sorting__type('По функционалу', '#')
+    ul.sorting__directions
+      li.sorting__direction
+        a.sorting__button.sorting__button--up.sorting__button--active(href='#')
+          span.visually-hidden По убыванию
+      li.sorting__direction
+        a.sorting__button(href='#')
+          span.visually-hidden По возрастанию
