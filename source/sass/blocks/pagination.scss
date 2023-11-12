@@ -1,0 +1,15 @@
+.pagination {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pagination__button {
+  min-width: 38px;
+
+  &--next {
+    min-width: 140px;
+  }
+}

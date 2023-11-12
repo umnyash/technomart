@@ -1,0 +1,10 @@
+mixin pagination
+  ol.pagination&attributes(attributes)
+    li.pagination__item
+      +alter-button('a', '1', '', '#')(class='pagination__button alter-button--rounded alter-button--active')
+    li.pagination__item
+      +alter-button('a', '2', '', '#')(class='pagination__button alter-button--rounded')
+    li.pagination__item
+      +alter-button('a', '3', '', '#')(class='pagination__button alter-button--rounded')
+    li.pagination__item
+      +alter-button('a', 'Следующая', '', '#')(class='pagination__button pagination__button--next alter-button--rounded')
