@@ -1,0 +1,10 @@
+include ../../data/products
+
+mixin catalog
+  section.catalog&attributes(attributes)
+    .catalog__inner.container
+      h2.visually-hidden Каталог
+      +filter(class='catalog__filter')
+      +sorting(class='catalog__sorting')
+      +products-list(products)(class='catalog__list')
+      +pagination(class='catalog__pagination')

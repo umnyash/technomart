@@ -1,0 +1,22 @@
+.catalog__inner {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 220px 1fr;
+  column-gap: 20px;
+}
+
+.catalog__filter {
+  grid-row: 1 / 4;
+}
+
+.catalog__sorting {
+  margin: 0 0 28px;
+}
+
+.catalog__list {
+  margin: 0;
+}
+
+.catalog__pagination {
+  margin: 48px 0 0;
+}
