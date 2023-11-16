@@ -1,0 +1,34 @@
+.text-field__inner {
+  display: grid;
+  row-gap: 10px;
+}
+
+.text-field__label {
+  font: 18px/24px $additional-font-family;
+}
+
+.text-field__control {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid $border-color-dark;
+  border-radius: 2px;
+  font: inherit;
+  color: inherit;
+  transition: border-color $little-interaction-duration $little-interaction-timing-function;
+
+  &::placeholder {
+    opacity: 1;
+    color: $text-weak-color-2;
+  }
+
+  &:enabled:hover {
+    border-color: $border-color-darkest;
+  }
+
+  &:disabled {
+    border-color: $border-color-darkest;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}

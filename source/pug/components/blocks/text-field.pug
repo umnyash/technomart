@@ -1,0 +1,6 @@
+mixin text-field(label, name, type, value, placeholder, isRequired, isDisabled)
+  .text-field&attributes(attributes)
+    label.text-field__inner
+      span.text-field__label= label
+      span.text-field__control-wrapper
+        input.text-field__control(name= name, type= type, value= value ? value : false, placeholder= placeholder, required= isRequired ? true : false, disabled= isDisabled ? true : false)
