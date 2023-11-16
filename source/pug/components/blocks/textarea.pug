@@ -1,0 +1,5 @@
+mixin textarea(label, name, text, placeholder, isRequired)
+  .textarea&attributes(attributes)
+    label.textarea__inner
+      span.textarea__label= label
+      textarea.textarea__control(name= name placeholder= placeholder required= isRequired ? true : false)= text
