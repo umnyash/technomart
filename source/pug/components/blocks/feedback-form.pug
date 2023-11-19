@@ -1,0 +1,9 @@
+mixin feedback-form
+  form.feedback-form(action='https://echo.htmlacademy.ru' method='post' target='_blank')&attributes(attributes)
+    h2.visually-hidden Напишите нам!
+    .feedback-form__body
+      +text-field('Ваше имя:', 'name', 'text', '', 'Имя Фамилия', true)
+      +text-field('Ваш e-mail:', 'email', 'email', '', 'email@example.com', true)
+      +textarea('Текст письма:', 'text', '', 'В свободной форме', true)(class='feedback-form__textarea')
+    .feedback-form__footer
+      +main-button('button', 'Отправить', 'submit')(class='main-button--primary')
