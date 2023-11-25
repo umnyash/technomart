@@ -17,6 +17,12 @@
   &--closing {
     animation: modal-disappearance 300ms ease-in forwards;
   }
+
+  &--feedback {
+    .modal__inner {
+      width: 620px;
+    }
+  }
 }
 
 .modal__inner {

@@ -7,4 +7,4 @@ mixin location
       picture.location__image-wrapper
         source(type='image/webp' srcset=`img/location/location-preview.webp, img/location/location-preview@2x.webp 2x`)
         img.location__image(src= 'img/location/location-preview.png' srcset= 'img/location/location-preview@2x.png 2x' width='300' height='158' alt='Расположение офиса на карте по адресу: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П.' loading='lazy')
-    +main-button('a', 'Заблудились? Напишите нам!', '', '#feedback')(class='location__button main-button--primary')
+    +main-button('a', 'Заблудились? Напишите нам!', '', '#')(class='location__button main-button--primary' data-modal-opener='feedback')
