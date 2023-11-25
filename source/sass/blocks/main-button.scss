@@ -8,6 +8,27 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  &--pending {
+    position: relative;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 50% 0 0 50%;
+      width: 12px;
+      height: 12px;
+      border: 2px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: button-spinner 600ms linear infinite;
+    }
+
+    .main-button__inner {
+      opacity: 0;
+    }
+  }
 }
 
 .main-button--primary {
