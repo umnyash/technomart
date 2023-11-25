@@ -19,3 +19,23 @@
   padding: 37px 80px;
   background: $background-additional-color-3;
 }
+
+.feedback-form__error-text {
+  margin: 0 0 12px;
+  line-height: 20px;
+  color: $accent-color;
+  transform-origin: left center;
+  animation: feedback-form-error-text-appearance 300ms;
+}
+
+@keyframes feedback-form-error-text-appearance {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}

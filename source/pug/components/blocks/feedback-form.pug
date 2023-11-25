@@ -6,4 +6,5 @@ mixin feedback-form
       +text-field('Ваш e-mail:', 'email', 'email', '', 'email@example.com', true)
       +textarea('Текст письма:', 'text', '', 'В свободной форме', true)(class='feedback-form__textarea')
     .feedback-form__footer
+      .feedback-form__error-text-wrapper
       +main-button('button', 'Отправить', 'submit')(class='main-button--primary')
