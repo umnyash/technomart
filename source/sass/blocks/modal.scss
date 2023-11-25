@@ -18,7 +18,8 @@
     animation: modal-disappearance 300ms ease-in forwards;
   }
 
-  &--feedback {
+  &--feedback,
+  &--alert {
     .modal__inner {
       width: 620px;
     }
