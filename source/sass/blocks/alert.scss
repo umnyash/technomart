@@ -1,0 +1,50 @@
+.alert {
+  &--success {
+    .alert__text::before {
+      background: $special-color url("../img/icons.svg#tick") no-repeat 56% 56% / 39px 30px;
+    }
+  }
+
+  &--error {
+    .alert__text::before {
+      background: $accent-color url("../img/icons.svg#x-rounded") no-repeat 50% 50% / 24px 24px;
+    }
+  }
+}
+
+.alert__text {
+  display: grid;
+  padding: 48px 80px;
+  margin: 0;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  align-items: center;
+  font: 700 24px/30px $additional-font-family;
+
+  &::before {
+    content: "";
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+  }
+}
+
+.alert__footer {
+  display: grid;
+  padding: 37px 112px;
+  grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+  gap: 12px;
+  background: $background-additional-color-3;
+
+  &:empty {
+    display: none; // (1)
+  }
+}
+
+/*
+ * В подвал оповещения (alert__footer) могут быть вставлены 1-2 кнопки.
+ * Если они не вставлены, то подвал не будет отображаться.
+ * В dev-режиме, когда HTML не минифицирован, в подвале остаётся перенос строки,
+ * что делает подвал непустым и он отображается. Это нормально.
+ * С минифицированным HTML будучи пустым он не будет отображаться.
+ */
