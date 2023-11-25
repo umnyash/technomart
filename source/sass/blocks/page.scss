@@ -8,6 +8,7 @@
 
 .page__inner {
   position: relative;
+  z-index: 0;
   display: grid;
   box-sizing: border-box;
   height: 100vh;
