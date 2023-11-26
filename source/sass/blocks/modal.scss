@@ -24,6 +24,12 @@
       width: 620px;
     }
   }
+
+  &--error {
+    .modal__inner {
+      animation: shake 300ms ease-in-out;
+    }
+  }
 }
 
 .modal__inner {

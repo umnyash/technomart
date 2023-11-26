@@ -13,6 +13,7 @@ export const initFeedbackModal = (modalElement, openModal, closeModal, sendData)
   document.querySelectorAll('[data-modal-opener="feedback"]').forEach((opener) => {
     opener.addEventListener('click', (evt) => {
       evt.preventDefault();
+      modalElement.classList.remove('modal--error');
       errorTextWrapperElement.innerHTML = '';
       openModal(modalElement);
     });
@@ -55,17 +56,22 @@ export const initFeedbackModal = (modalElement, openModal, closeModal, sendData)
         },
         () => {
           const errorTextElementString = `
-            <p class="feedback-form__error-text">
-              ❌ Ошибка при оправке письма.<br> Проверьте подключение к интернету и попробуйте ещё раз.
-            </p>
+          <p class="feedback-form__error-text">
+            ❌ Ошибка при оправке письма.<br> Проверьте подключение к интернету и попробуйте ещё раз.
+          </p>
           `;
           errorTextWrapperElement.insertAdjacentHTML('beforeend', errorTextElementString);
+          modalElement.classList.remove('modal--error');
+          setTimeout(() => modalElement.classList.add('modal--error'), 50);
         },
         () => {
           submitButtonElement.disabled = false;
           submitButtonElement.classList.remove(SUBMIT_BUTTON_PENDING_STATE_CLASS);
         }
       );
+    } else {
+      modalElement.classList.remove('modal--error');
+      setTimeout(() => modalElement.classList.add('modal--error'), 50);
     }
   });
 };
