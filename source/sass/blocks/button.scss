@@ -7,6 +7,27 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  &--pending {
+    position: relative;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 50% 0 0 50%;
+      width: 12px;
+      height: 12px;
+      border: 2px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: button-spinner 600ms linear infinite;
+    }
+
+    .button__inner {
+      opacity: 0;
+    }
+  }
 }
 
 .button--primary {
@@ -46,18 +67,20 @@
 }
 
 .button--with-icon {
-  display: inline-grid;
-  grid-auto-flow: column;
-  gap: 8px;
-  justify-content: center;
+  .button__inner {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    justify-content: center;
 
-  &::before {
-    content: "";
-    background: currentColor;
-    opacity: 0.3;
+    &::before {
+      content: "";
+      background: currentColor;
+      opacity: 0.3;
+    }
   }
 
-  &_cart::before {
+  &_cart .button__inner::before {
     width: 15px;
     height: 15px;
     mask: url("../img/icons.svg#cart");
