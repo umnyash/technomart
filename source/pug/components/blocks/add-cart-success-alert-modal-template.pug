@@ -1,0 +1,6 @@
+mixin add-cart-success-alert-modal-template
+  template#add-cart-success-alert-modal-template&attributes(attributes)
+    +modal(class='modal--alert')
+      +alert('Товар добавлен в корзину!')(class='alert--success')
+        +main-button('a', 'Оформить заказ', '', '#')(class='alert__order-button main-button--primary')
+        +main-button('button', 'Продолжить покупки', 'button')(class='alert__close-button main-button--secondary')

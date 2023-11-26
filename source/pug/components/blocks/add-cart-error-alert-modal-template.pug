@@ -1,0 +1,4 @@
+mixin add-cart-error-alert-modal-template
+  template#add-cart-error-alert-modal-template&attributes(attributes)
+    +modal(class='modal--alert')
+      +alert('Не удалось добавить товар в корзину! 🥺 Проверьте подключение к интернету.')(class='alert--error')
