@@ -49,10 +49,10 @@ export const initFeedbackModal = (modalElement, openModal, closeModal, sendData)
           formElement.reset();
           closeModal(modalElement);
 
-          const alertTemplate = document.querySelector('#feedback-success-alert-modal-template').content.querySelector('.modal');
-          const alert = alertTemplate.cloneNode(true);
-          document.body.appendChild(alert);
-          openModal(alert);
+          const successAlertTemplateElement = document.querySelector('#feedback-success-alert-modal-template').content.querySelector('.modal');
+          const successAlertElement = successAlertTemplateElement.cloneNode(true);
+          document.body.appendChild(successAlertElement);
+          openModal(successAlertElement);
         },
         () => {
           const errorTextElementString = `
