@@ -34,3 +34,12 @@
     pointer-events: none;
   }
 }
+
+.textarea.invalid .textarea__label {
+  color: $accent-color;
+}
+
+.textarea .prompt-text {
+  margin: 0;
+  color: $accent-color;
+}

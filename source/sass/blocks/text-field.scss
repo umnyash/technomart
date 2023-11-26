@@ -32,3 +32,12 @@
     pointer-events: none;
   }
 }
+
+.text-field.invalid .text-field__label {
+  color: $accent-color;
+}
+
+.text-field .prompt-text {
+  margin: 0;
+  color: $accent-color;
+}
