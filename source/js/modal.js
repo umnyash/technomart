@@ -19,6 +19,10 @@ export const closeModal = (modal) => {
   setTimeout(() => {
     modal.classList.remove('modal--open');
     modal.classList.remove('modal--closing');
+
+    if (modal.classList.contains('modal--alert')) {
+      modal.remove();
+    }
   }, MODAL_DISAPPEARANCE_TIME);
 };
 
