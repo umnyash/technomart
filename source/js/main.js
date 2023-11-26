@@ -1,8 +1,9 @@
 import { initSlider } from './slider.js';
 import { initTaber } from './taber.js';
 import { initNumberRange } from './number-range.js';
-import { openModal } from './modal.js';
+import { openModal, closeModal } from './modal.js';
 import { initFeedbackModal } from './feedback-modal.js';
+import { sendData } from './api.js';
 
 document.querySelectorAll('.slider').forEach(initSlider);
 
@@ -14,5 +15,5 @@ document.querySelectorAll('.number-range').forEach(initNumberRange);
 
 const feedbackModalElement = document.querySelector('.modal--feedback');
 if (feedbackModalElement) {
-  initFeedbackModal(feedbackModalElement, openModal);
+  initFeedbackModal(feedbackModalElement, openModal, closeModal, sendData);
 }
