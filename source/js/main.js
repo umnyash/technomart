@@ -4,6 +4,7 @@ import { initNumberRange } from './number-range.js';
 import { openModal, closeModal } from './modal.js';
 import { initFeedbackModal } from './feedback-modal.js';
 import { sendData } from './api.js';
+import { initProductsList } from './products-list.js';
 
 document.querySelectorAll('.slider').forEach(initSlider);
 
@@ -17,3 +18,7 @@ const feedbackModalElement = document.querySelector('.modal--feedback');
 if (feedbackModalElement) {
   initFeedbackModal(feedbackModalElement, openModal, closeModal, sendData);
 }
+
+document.querySelectorAll('.products-list').forEach((productsListElement) => {
+  initProductsList(productsListElement, openModal, closeModal, sendData);
+});

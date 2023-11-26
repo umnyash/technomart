@@ -12,5 +12,5 @@ mixin product({ heading, href, image, image2x, imageWebp, imageWebp2x, alt, oldP
         s.product__old-price!= `${oldPrice}&nbsp;₽`
       b.product__new-price!= `${newPrice}&nbsp;₽`
     p.product__actions
-      +button('a', 'Купить', '', '#')(class='product__button button button--primary button--with-icon button--with-icon_cart')
+      +button('a', 'Купить', '', '#')(class='product__button product__buy-button button button--primary button--with-icon button--with-icon_cart')
       +button('a', 'В закладки', '', '#')(class='product__button button button--secondary')
