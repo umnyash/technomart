@@ -2,7 +2,7 @@ mixin location
   section.location&attributes(attributes)
     h2.location__heading.heading Контакты
     p.location__text Вы можете забрать товар сами,#[br] заехав в&nbsp;наш офис:
-    a.location__link(href='https://yandex.ru/maps/-/CDadu2Yz' target='_blank' rel='nofollow noopener')
+    a.location__link(href='https://yandex.ru/maps/-/CDadu2Yz' data-modal-opener='map' target='_blank' rel='nofollow noopener')
       span.visually-hidden Открыть карту
       picture.location__image-wrapper
         source(type='image/webp' srcset=`img/location/location-preview.webp, img/location/location-preview@2x.webp 2x`)

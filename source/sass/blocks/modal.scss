@@ -71,6 +71,11 @@
   }
 }
 
+.modal__contacts-map {
+  width: 940px;
+  height: 450px;
+}
+
 @keyframes modal-appearance {
   0% {
     transform: translateY(-100vh);
