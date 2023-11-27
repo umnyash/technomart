@@ -41,6 +41,7 @@
 
 .modal__close {
   position: absolute;
+  z-index: 1;
   inset: 14px 11px auto auto;
   padding: 0;
   border: 0;
