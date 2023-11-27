@@ -1,0 +1,6 @@
+mixin contacts-map
+  .map.contacts-map&attributes(attributes)
+    picture.map__image-wrapper
+      source(type='image/webp' srcset=`img/location/location.webp, img/location/location@2x.webp 2x`)
+      img.map__image(src='img/location/location.png' srcset= `img/location/location@2x.png 2x` width='940' height='450' alt='Расположение офиса на карте по адресу: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П.' loading='lazy')
+    .map__main
