@@ -1,6 +1,6 @@
 const SUBMIT_BUTTON_PENDING_STATE_CLASS = 'main-button--pending';
 
-export const initFeedbackModal = (modalElement, openModal, closeModal, sendData) => {
+export const initFeedbackModal = (modalElement, openModal, closeModal, sendData, checkLocalStorageSupport) => {
   const formElement = modalElement.querySelector('form');
   const nameFieldElement = formElement.querySelector('[name="name"]');
   const emailFieldElement = formElement.querySelector('[name="email"]');
@@ -8,6 +8,7 @@ export const initFeedbackModal = (modalElement, openModal, closeModal, sendData)
   const submitButtonElement = formElement.querySelector('button[type="submit"]');
   const errorTextWrapperElement = formElement.querySelector('.feedback-form__error-text-wrapper');
 
+  const isLocalStorageSupport = checkLocalStorageSupport();
   const actionUrl = formElement.getAttribute('action');
 
   document.querySelectorAll('[data-modal-opener="feedback"]').forEach((opener) => {
@@ -15,7 +16,24 @@ export const initFeedbackModal = (modalElement, openModal, closeModal, sendData)
       evt.preventDefault();
       modalElement.classList.remove('modal--error');
       errorTextWrapperElement.innerHTML = '';
+
       openModal(modalElement);
+      nameFieldElement.focus();
+
+      if (isLocalStorageSupport) {
+        const name = localStorage.getItem('name');
+        const email = localStorage.getItem('email');
+
+        if (name) {
+          nameFieldElement.value = name;
+          emailFieldElement.focus();
+        }
+
+        if (email) {
+          emailFieldElement.value = email;
+          textFieldElement.focus();
+        }
+      }
     });
   });
 
@@ -46,6 +64,11 @@ export const initFeedbackModal = (modalElement, openModal, closeModal, sendData)
         actionUrl,
         new FormData(evt.target),
         () => {
+          if (isLocalStorageSupport) {
+            localStorage.setItem('name', nameFieldElement.value);
+            localStorage.setItem('email', emailFieldElement.value);
+          }
+
           formElement.reset();
           closeModal(modalElement);
 
