@@ -33,7 +33,7 @@
   font: 700 21px/30px $additional-font-family;
   color: $text-alter-color;
   background: $background-alter-color;
-  transition-property: color, background-color;
+  transition-property: color, border-color, background-color;
   transition-duration: $little-interaction-duration;
   transition-timing-function: $little-interaction-timing-function;
 
