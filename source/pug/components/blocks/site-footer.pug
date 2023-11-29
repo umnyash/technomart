@@ -9,16 +9,16 @@ mixin site-footer
       address.site-footer__contacts г.&nbsp;Санкт-Петербург, наб.&nbsp;Реки Карповки, 5&nbsp;лит&nbsp;П
         a.site-footer__contacts-link(href="tel:+78005558628") +7&nbsp;(800)&nbsp;555-86-28
       ul.site-footer__navigation
-        +site-footer__navigation-item('Компания', 'company.html', 'company-page')
-        +site-footer__navigation-item('Новости', 'news.html', 'news-page')
+        +site-footer__navigation-item('Компания', '#', 'company-page')
+        +site-footer__navigation-item('Новости', '#', 'news-page')
         +site-footer__navigation-item('Каталог', 'catalog.html', 'catalog-page')
-        +site-footer__navigation-item('Доставка', 'delivery.html', 'delivery-page')
-        +site-footer__navigation-item('Контакты', 'contacts.html', 'contacts-page')
+        +site-footer__navigation-item('Доставка', '#', 'delivery-page')
+        +site-footer__navigation-item('Контакты', '#', 'contacts-page')
       ul.site-footer__navigation.site-footer__navigation--accent
-        +site-footer__navigation-item('Материалы', 'materials.html', 'materials-page')
-        +site-footer__navigation-item('Техника', 'technique.html', 'technique-page')
-        +site-footer__navigation-item('Инструмент', 'tool.html', 'tool-page')
-        +site-footer__navigation-item('Спецпредложения', 'special-offers.html', 'special-offers-page')
+        +site-footer__navigation-item('Материалы', '#', 'materials-page')
+        +site-footer__navigation-item('Техника', '#', 'technique-page')
+        +site-footer__navigation-item('Инструмент', '#', 'tool-page')
+        +site-footer__navigation-item('Спецпредложения', '#', 'special-offers-page')
     .site-footer__panel
       .site-footer__panel-inner.container
         p.site-footer__copyright © 2010–2021 Компания «Техномарт»#[br] Все права защищены
